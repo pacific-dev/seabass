@@ -1,21 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Box } from "@seabass/flexbox";
+import { Label, Input, Textarea } from "@seabass/forms";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <Box sx={{ px: 2, py: 2 }}>
+      <Label>Open up App.js to start working on your app!</Label>
+      <Input />
+      <Textarea />
       <StatusBar style="auto" />
-    </View>
+    </Box>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
