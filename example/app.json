@@ -1,0 +1,12 @@
+{
+  "name": "seabass-example",
+  "displayName": "seabass-example",
+  "expo": {
+    "name": "seabass-example",
+    "slug": "seabass-example",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
