@@ -9,6 +9,22 @@ export const get = (obj, key, def, p, undef) => {
   return obj === undef ? def : obj;
 };
 
+export const deepMerge = (object, other) => {
+  let target = object;
+
+  for (const prop in other) {
+    if (other.hasOwnProperty(prop)) {
+      if (Object.prototype.toString.call(other[prop]) === "[object Object]") {
+        target[prop] = deepMerge(target[prop], other[prop]);
+      } else {
+        target[prop] = other[prop];
+      }
+    }
+  }
+
+  return target;
+};
+
 const defaultTheme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
@@ -141,14 +157,45 @@ const transforms = [
   {}
 );
 
+const modifiers = {
+  ":pressed": "pressed",
+};
+
 // TODO: Implement Responsive based on screen sizes
 export const responsive = (styles) => (_theme) => {
   return styles;
 };
 
+export const flattenStyle = (styles) => {
+  const result = [];
+  let modifiers = {};
+
+  for (let i = 0, stylesLength = styles.length; i < stylesLength; ++i) {
+    const [style, selectors] = styles[i];
+    result.push(style);
+    if (Object.keys(selectors).length > 0) {
+      modifiers = deepMerge(modifiers, selectors);
+    }
+  }
+
+  if (Object.keys(modifiers).length > 0) {
+    return (props) => {
+      const modified = [];
+
+      for (const key in modifiers) {
+        modified.push(props[key] ? modifiers[key] : null);
+      }
+      return result.concat(modified);
+    };
+  }
+
+  return result;
+};
+
 export const create = (args) => (props = {}) => {
   const theme = { ...defaultTheme, ...(props.theme || props) };
   let result = {};
+  let selectors = {};
   const obj = typeof args === "function" ? args(theme) : args;
   const styles = responsive(obj)(theme);
 
@@ -163,7 +210,7 @@ export const create = (args) => (props = {}) => {
     }
 
     if (val && typeof val === "object") {
-      result[key] = create(val)(theme);
+      selectors[modifiers[key]] = create(val)(theme);
       continue;
     }
 
@@ -184,5 +231,5 @@ export const create = (args) => (props = {}) => {
     }
   }
 
-  return result;
+  return [result, selectors];
 };
