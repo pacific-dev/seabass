@@ -7,6 +7,7 @@ const base = (props) => create(props.__style)(props.theme);
 const variant = ({ theme, variant, tx = "variants" }) =>
   create(get(theme, tx + "." + variant, get(theme, variant)))(theme);
 
+// TODO: Create styles also from props
 export const Box = forwardRef((props, ref) => {
   const Component = props.as || View;
   return (
