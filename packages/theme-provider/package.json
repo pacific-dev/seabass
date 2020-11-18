@@ -1,0 +1,59 @@
+{
+    "name": "@seabass/theme-provider",
+    "description": "Theme provider for seabass.",
+    "version": "0.1.0",
+    "keywords": [
+      "react-native-component",
+      "react-component",
+      "react-native",
+      "ios",
+      "android"
+    ],
+    "license": "EPL-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ditch-dev/seabass.git",
+      "directory": "packages/theme-provider"
+    },
+    "bugs": {
+      "url": "https://github.com/ditch-dev/seabass/issues"
+    },
+    "main": "lib/commonjs/index.js",
+    "react-native": "src/index.js",
+    "source": "src/index.js",
+    "module": "lib/module/index.js",
+    "files": [
+      "src",
+      "lib",
+      "!**/__tests__"
+    ],
+    "sideEffects": false,
+    "publishConfig": {
+      "access": "public"
+    },
+    "scripts": {
+      "prepare": "bob build",
+      "clean": "del lib"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+      "@react-native-community/bob": "^0.16.2",
+      "del-cli": "^3.0.1",
+      "react": "~16.13.1",
+      "react-native": "~0.63.2"
+    },
+    "peerDependencies": {
+      "react": "*",
+      "react-native": "*"
+    },
+    "@react-native-community/bob": {
+      "source": "src",
+      "output": "lib",
+      "targets": [
+        "commonjs",
+        "module"
+      ]
+    }
+  }
+  

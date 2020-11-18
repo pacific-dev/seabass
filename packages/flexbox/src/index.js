@@ -1,20 +1,23 @@
 import React, { forwardRef } from "react";
 import { View } from "react-native";
 import { create, get, flattenStyle } from "./factory";
+import { useTheme } from "@seabass/theme-provider";
 
-const sx = (props) => create(props.sx)(props.theme);
-const base = (props) => create(props.__style)(props.theme);
-const variant = ({ theme, variant, tx = "variants" }) =>
+const sx = (props, theme) => create(props.sx)(theme);
+const base = (props, theme) => create(props.__style)(theme);
+const variant = ({ variant, tx = "variants" }, theme) =>
   create(get(theme, tx + "." + variant, get(theme, variant)))(theme);
 
 // TODO: Create styles also from props
 export const Box = forwardRef((props, ref) => {
   const Component = props.as || View;
+  const theme = useTheme();
+
   return (
     <Component
       ref={ref}
       {...props}
-      style={flattenStyle([variant(props), base(props), sx(props)])}
+      style={flattenStyle([variant(props, theme), base(props, theme), sx(props, theme)])}
     />
   );
 });
