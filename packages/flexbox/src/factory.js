@@ -96,6 +96,8 @@ const scales = {
   borderRight: "borders",
   borderBottom: "borders",
   borderLeft: "borders",
+  borderStart: "borders",
+  borderEnd: "borders",
   borderWidth: "borderWidths",
   borderStyle: "borderStyles",
   borderRadius: "radii",
@@ -103,6 +105,8 @@ const scales = {
   borderTopLeftRadius: "radii",
   borderBottomRightRadius: "radii",
   borderBottomLeftRadius: "radii",
+  borderTopStartRadius: "radii",
+  borderTopEndRadius: "radii",
   borderTopWidth: "borderWidths",
   borderTopColor: "colors",
   borderTopStyle: "borderStyles",
@@ -115,6 +119,12 @@ const scales = {
   borderRightWidth: "borderWidths",
   borderRightColor: "colors",
   borderRightStyle: "borderStyles",
+  borderStartWidth: "borderWidths",
+  borderStartColor: "colors",
+  borderStartStyle: "borderStyles",
+  borderEndWidth: "borderWidths",
+  borderEndColor: "colors",
+  borderEndStyle: "borderStyles",
   outlineColor: "colors",
   //TODO: Use only one object for shadow
   shadowColor: "shadowColor",
@@ -134,6 +144,28 @@ const scales = {
   maxHeight: "sizes",
   flexBasis: "sizes",
   size: "sizes",
+};
+
+const extraAllowedStyle = {
+  fontStyle: true,
+  textAlign: true,
+  textDecorationLine: true,
+  textDecorationStyle: true,
+  textTransform: true,
+  overflow: true,
+  aspectRatio: true,
+  alignContent: true,
+  alignItems: true,
+  alignSelf: true,
+  justifyContent: true,
+  flex: true,
+  flexBasis: true,
+  flexDirection: true,
+  flexGrow: true,
+  flexShrink: true,
+  flexWrap: true,
+  opacity: true,
+  visible: true,
 };
 
 const positiveOrNegative = (scale, value) => {
@@ -166,6 +198,8 @@ const transforms = [
   "bottom",
   "left",
   "right",
+  "start",
+  "end",
 ].reduce(
   (acc, curr) => ({
     ...acc,
@@ -176,6 +210,18 @@ const transforms = [
 
 const modifiers = {
   ":pressed": "pressed",
+};
+
+export const selectStyles = (args) => {
+  const result = {};
+
+  for (const key in args) { 
+    if(aliases[key] != undefined || scales[key] != undefined || extraAllowedStyle[key] != undefined) {
+      result[key] = args[key];
+    }
+  }
+
+  return result;
 };
 
 // TODO: Implement Responsive based on screen sizes

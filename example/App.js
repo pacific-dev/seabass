@@ -9,7 +9,7 @@ import { Pressable, Text } from "@seabass/seabass";
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ px: 2, py: 2 }}>
+      <Box px={2} py={2}>
         <Label>Open up App.js to start working on your app!</Label>
         <Input />
         <Textarea />
