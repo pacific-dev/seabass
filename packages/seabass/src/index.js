@@ -19,7 +19,7 @@ export const Heading = forwardRef((props, ref) => (
     tx="text"
     variant="heading"
     {...props}
-    __css={{
+    __style={{
       fontSize: 4,
       fontFamily: "heading",
       fontWeight: "heading",
@@ -32,20 +32,34 @@ export const Link = forwardRef((props, ref) => (
   <Box ref={ref} as={RNText} variant="link" {...props} />
 ));
 
-export const Button = forwardRef((props, ref) => (
+const pressableChildrens = (children) => {
+  if (typeof children === "string") {
+    return (
+      <Text
+        __style={{
+          color: "inherit",
+          lineHeight: "inherit",
+          textDecoration: "none",
+          fontSize: "inherit",
+          textAlign: "center",
+        }}
+      >
+        {children}
+      </Text>
+    );
+  } else {
+    return children;
+  }
+};
+
+export const Pressable = forwardRef(({ children, ...props }, ref) => (
   <Box
     ref={ref}
     as={RNPressable}
-    tx="buttons"
+    tx="pressable"
     variant="primary"
     {...props}
-    __css={{
-      appearance: "none",
-      display: "inline-block",
-      textAlign: "center",
-      lineHeight: "inherit",
-      textDecoration: "none",
-      fontSize: "inherit",
+    __style={{
       px: 3,
       py: 2,
       color: "white",
@@ -53,7 +67,9 @@ export const Button = forwardRef((props, ref) => (
       border: 0,
       borderRadius: 4,
     }}
-  />
+  >
+    {pressableChildrens(children)}
+  </Box>
 ));
 
 export const Image = forwardRef((props, ref) => (
@@ -61,7 +77,7 @@ export const Image = forwardRef((props, ref) => (
     ref={ref}
     as={RNImage}
     {...props}
-    __css={{
+    __style={{
       maxWidth: "100%",
       height: "auto",
     }}
