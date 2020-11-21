@@ -1,6 +1,6 @@
 {
     "name": "@seabass/flexbox",
-    "description": "React Native primitive flexbox UI to be used in ditch-dev projects. ",
+    "description": "React Native primitive flexbox UI to be used in pacific-dev projects. ",
     "version": "0.1.0",
     "keywords": [
       "react-native-component",
@@ -14,11 +14,11 @@
     "license": "EPL-2.0",
     "repository": {
       "type": "git",
-      "url": "https://github.com/ditch-dev/seabass.git",
+      "url": "https://github.com/pacific-dev/seabass.git",
       "directory": "packages/flexbox"
     },
     "bugs": {
-      "url": "https://github.com/ditch-dev/seabass/issues"
+      "url": "https://github.com/pacific-dev/seabass/issues"
     },
     "main": "lib/commonjs/index.js",
     "react-native": "src/index.js",

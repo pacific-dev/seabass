@@ -27,4 +27,4 @@ Seabass is heavily inspired by [Rebass](https://github.com/rebassjs/rebass) and 
 
 ### License
 
-EPL-2.0, see [LICENSE.md](https://github.com/ditch-dev/seabass/blob/main/LICENSE) for details.
+EPL-2.0, see [LICENSE.md](https://github.com/pacific-dev/seabass/blob/main/LICENSE) for details.
