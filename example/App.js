@@ -1,14 +1,13 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { Image } from "react-native";
-import { ThemeProvider } from "@seabass/theme-provider";
-import theme from "@seabass/preset";
-import { Box } from "@seabass/flexbox";
-import { Stack } from "@seabass/layout";
-import { Label, Input, Textarea } from "@seabass/forms";
-import { Pressable, Text } from "@seabass/seabass";
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { ThemeProvider } from '@seabass/theme-provider';
+import theme from '@seabass/preset';
+import { Box } from '@seabass/flexbox';
+import { Stack } from '@seabass/layout';
+import { Label, Input, Textarea } from '@seabass/forms';
+import { Pressable, Text, Image } from '@seabass/seabass';
 
-const Placeholder = () => <Box width={100} height={20} bg={"black"} />;
+const Placeholder = () => <Box width={100} height={20} bg={'black'} />;
 
 export default function App() {
   return (
@@ -18,17 +17,17 @@ export default function App() {
         <Input />
         <Textarea />
         <Image
-          style={{
+          sx={{
             width: 50,
             height: 50,
             borderRadius: 25,
           }}
-          source={{ uri: "https://picsum.photos/200/200" }}
+          source={{ uri: 'https://picsum.photos/200/200' }}
         />
         <Pressable>
           {({ pressed }) => (
-            <Text sx={{ color: "inherit" }}>
-              I'm {pressed ? "not pressed" : "pressed"}
+            <Text sx={{ color: 'inherit' }}>
+              I'm {pressed ? 'not pressed' : 'pressed'}
             </Text>
           )}
         </Pressable>

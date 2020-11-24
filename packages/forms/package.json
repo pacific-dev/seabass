@@ -37,6 +37,7 @@
       "clean": "del lib"
     },
     "dependencies": {
+      "@seabass/flexbox": "0.1.0"
     },
     "devDependencies": {
       "@react-native-community/bob": "^0.16.2",

@@ -36,6 +36,7 @@
     "clean": "del lib"
   },
   "dependencies": {
+    "@seabass/flexbox": "0.1.0",
     "react-keyed-flatten-children": "^1.3.0"
   },
   "devDependencies": {

@@ -10,7 +10,8 @@
     "prepare": "lerna run prepare",
     "start": "yarn workspace docs start",
     "build": "yarn workspace docs build",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint --ext '.js' .",
     "cover": "npx codecov",
     "example": "yarn --cwd example"
   },
@@ -19,17 +20,49 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/react": "^10.0.4",
     "babel-loader": "^8.2.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "jest": "^25.2.4",
     "jest-emotion": "^10.0.14",
     "jest-styled-components": "^6.3.3",
     "lerna": "^3.16.4",
-    "metro-react-native-babel-preset": "^0.64.0"
+    "metro-react-native-babel-preset": "^0.64.0",
+    "prettier": "^2.2.0"
   },
   "resolutions": {
     "react": "~16.13.1",
     "react-native": "~0.63.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "react-native/no-inline-styles": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "eslintIgnore": ["node_modules/", "lib/"],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
   },
   "jest": {
     "testMatch": [

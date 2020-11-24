@@ -1,10 +1,10 @@
-import React, { forwardRef } from "react";
-import { Box, Flex } from "@seabass/flexbox";
+import React, { forwardRef } from 'react';
+import { Box, Flex } from '@seabass/flexbox';
 import {
   Text as RNText,
   Pressable as RNPressable,
   Image as RNImage,
-} from "react-native";
+} from 'react-native';
 
 export { Box, Flex };
 
@@ -21,9 +21,9 @@ export const Heading = forwardRef((props, ref) => (
     {...props}
     __style={{
       fontSize: 4,
-      fontFamily: "heading",
-      fontWeight: "heading",
-      lineHeight: "heading",
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
     }}
   />
 ));
@@ -33,15 +33,15 @@ export const Link = forwardRef((props, ref) => (
 ));
 
 const pressableChildrens = (children) => {
-  if (typeof children === "string") {
+  if (typeof children === 'string') {
     return (
       <Text
         __style={{
-          color: "inherit",
-          lineHeight: "inherit",
-          textDecoration: "none",
-          fontSize: "inherit",
-          textAlign: "center",
+          color: 'inherit',
+          lineHeight: 'inherit',
+          textDecoration: 'none',
+          fontSize: 'inherit',
+          textAlign: 'center',
         }}
       >
         {children}
@@ -62,8 +62,8 @@ export const Pressable = forwardRef(({ children, ...props }, ref) => (
     __style={{
       px: 3,
       py: 2,
-      color: "white",
-      bg: "primary",
+      color: 'white',
+      bg: 'primary',
       border: 0,
       borderRadius: 4,
     }}
@@ -78,8 +78,8 @@ export const Image = forwardRef((props, ref) => (
     as={RNImage}
     {...props}
     __style={{
-      maxWidth: "100%",
-      height: "auto",
+      maxWidth: '100%',
+      height: 'auto',
     }}
   />
 ));
