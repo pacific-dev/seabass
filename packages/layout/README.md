@@ -1,6 +1,6 @@
 # @seabass-ui/layout
 
-Use to create distributed items with a constat space between into a column or a row. 
+Use to create distributed items with a constant space between into a column or a row. 
 A `Stack` wraps each children of the stack in a `Box` that handles the spacing.
 
 ### Example

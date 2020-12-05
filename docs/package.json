@@ -22,10 +22,10 @@
         "build": "next build"
     },
     "dependencies": {
-        "next": "^10.0.3",
+        "next": "^10.0.0",
         "nextra": "^0.3.1",
         "nextra-theme-docs": "^0.3.1",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1"
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
     }
 }
