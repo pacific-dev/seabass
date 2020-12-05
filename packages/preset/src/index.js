@@ -8,7 +8,6 @@ export const preset = {
     secondary: '#30c',
     muted: '#f6f6f9',
     gray: '#dddddf',
-    highlight: 'hsla(205, 100%, 40%, 0.125)',
   },
   fonts: {
     body: 'inherit',
@@ -22,8 +21,8 @@ export const preset = {
     bold: 700,
   },
   lineHeights: {
-    body: 1.5,
-    heading: 1.25,
+    body: 21,
+    heading: 25,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
@@ -44,7 +43,7 @@ export const preset = {
       fontFamily: 'heading',
       fontWeight: 'heading',
       lineHeight: 'heading',
-      fontSize: [5, 6, 7],
+      fontSize: 5,
     },
     caps: {
       textTransform: 'uppercase',
@@ -67,7 +66,6 @@ export const preset = {
     nav: {
       'fontSize': 1,
       'fontWeight': 'bold',
-      'display': 'inline-block',
       'p': 2,
       'color': 'inherit',
       'textDecoration': 'none',
