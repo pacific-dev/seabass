@@ -1,0 +1,31 @@
+{
+    "name": "@seabass-ui/docs",
+    "description": "Documentation for seabass react native UI components.",
+    "version": "0.1.0",
+    "license": "EPL-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pacific-dev/seabass.git",
+        "directory": "docs"
+    },
+    "bugs": {
+        "url": "https://github.com/pacific-dev/seabass/issues"
+    },
+    "files": [
+        "src",
+        "lib",
+        "!**/__tests__"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "start": "next",
+        "build": "next build"
+    },
+    "dependencies": {
+        "next": "^10.0.3",
+        "nextra": "^0.3.1",
+        "nextra-theme-docs": "^0.3.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    }
+}

@@ -101,13 +101,6 @@ export const preset = {
       bg: 'secondary',
     },
   },
-  styles: {
-    root: {
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
-    },
-  },
 };
 
 export default preset;
