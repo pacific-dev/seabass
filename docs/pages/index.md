@@ -2,7 +2,7 @@
 
 **Seabass** - React Native primitive UI components inspired by [Rebass](https://github.com/rebassjs/rebass).
 
-Create themeable design systems in an easely configurable environment.
+Create themeable design systems in an easily configurable environment.
 
 Define a theme:
 

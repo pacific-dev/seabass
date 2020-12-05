@@ -1,4 +1,13 @@
 {
     "get-started": "Get Started",
+    "theme-spec": "Theme Specification",
+    "box": "Box",
+    "forms": "Forms",
+    "pressable": "Pressable",
+    "image": "Image",
+    "text": "Text",
+    "heading": "Heading",
+    "card": "Card",
+    "link": "Link",
     "layout": "Layout"
 }
