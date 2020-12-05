@@ -1,7 +1,7 @@
 {
     "name": "@seabass-ui/docs",
     "description": "Documentation for seabass react native UI components.",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "license": "EPL-2.0",
     "repository": {
         "type": "git",
