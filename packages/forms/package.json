@@ -1,5 +1,5 @@
 {
-    "name": "@seabass/forms",
+    "name": "@seabass-ui/forms",
     "description": "React Native primitive forms UI to be used in pacific-dev projects. ",
     "version": "0.1.0",
     "keywords": [
@@ -37,7 +37,7 @@
       "clean": "del lib"
     },
     "dependencies": {
-      "@seabass/flexbox": "0.1.0"
+      "@seabass-ui/flexbox": "0.1.0"
     },
     "devDependencies": {
       "@react-native-community/bob": "^0.16.2",

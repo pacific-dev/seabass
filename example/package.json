@@ -1,5 +1,5 @@
 {
-  "name": "@seabass/example",
+  "name": "@seabass-ui/example",
   "main": "index.js",
   "version": "0.1.0",
   "scripts": {

@@ -1,6 +1,6 @@
 import React, { Children, forwardRef } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';
-import { Box } from '@seabass/flexbox';
+import { Box } from '@seabass-ui/flexbox';
 
 export const Stack = forwardRef(
   ({ children, space, vertical = true, ...props }, ref) => {

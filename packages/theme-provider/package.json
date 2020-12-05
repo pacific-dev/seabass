@@ -1,5 +1,5 @@
 {
-    "name": "@seabass/theme-provider",
+    "name": "@seabass-ui/theme-provider",
     "description": "Theme provider for seabass.",
     "version": "0.1.0",
     "keywords": [

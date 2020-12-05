@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Box, Flex } from '@seabass/flexbox';
+import { Box, Flex } from '@seabass-ui/flexbox';
 import {
   Text as RNText,
   Pressable as RNPressable,

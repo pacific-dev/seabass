@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { View } from 'react-native';
 import { create, get, selectStyles, flattenStyle } from './factory';
-import { useTheme } from '@seabass/theme-provider';
+import { useTheme } from '@seabass-ui/theme-provider';
 
 const properties = (props, { theme }) => create(selectStyles(props))(theme);
 const sx = (props, { theme }) => create(props.sx)(theme);

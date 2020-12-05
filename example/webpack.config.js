@@ -26,7 +26,7 @@ module.exports = async function (env, argv) {
   fs.readdirSync(packages)
     .filter((name) => !name.startsWith('.'))
     .forEach((name) => {
-      config.resolve.alias[`@seabass/${name}`] = path.resolve(
+      config.resolve.alias[`@seabass-ui/${name}`] = path.resolve(
         packages,
         name,
         require(`../packages/${name}/package.json`).source

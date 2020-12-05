@@ -45,9 +45,9 @@ Compose components:
 
 ```jsx
 import React from 'react';
-import { Pressable, Heading, Box } from '@seabass/seabass';
-import { ThemeProvider } from '@seabass/theme-provider';
-import { Stack } from '@seabass/layout';
+import { Pressable, Heading, Box } from '@seabass-ui/seabass';
+import { ThemeProvider } from '@seabass-ui/theme-provider';
+import { Stack } from '@seabass-ui/layout';
 
 export default (_props) => (
   <ThemeProvider theme={theme}>

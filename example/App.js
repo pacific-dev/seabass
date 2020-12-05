@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ThemeProvider } from '@seabass/theme-provider';
-import theme from '@seabass/preset';
-import { Box } from '@seabass/flexbox';
-import { Stack } from '@seabass/layout';
-import { Label, Input, Textarea } from '@seabass/forms';
-import { Pressable, Text, Image } from '@seabass/seabass';
+import { ThemeProvider } from '@seabass-ui/theme-provider';
+import theme from '@seabass-ui/preset';
+import { Box } from '@seabass-ui/flexbox';
+import { Stack } from '@seabass-ui/layout';
+import { Label, Input, Textarea } from '@seabass-ui/forms';
+import { Pressable, Text, Image } from '@seabass-ui/seabass';
 
 const Placeholder = () => <Box width={100} height={20} bg={'black'} />;
 

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Text as RNText, TextInput as RNInput } from 'react-native';
-import { Box } from '@seabass/flexbox';
+import { Box } from '@seabass-ui/flexbox';
 
 export const Label = forwardRef((props, ref) => (
   <Box
