@@ -1,7 +1,7 @@
 {
     "name": "@seabass-ui/theme-provider",
     "description": "Theme provider for seabass.",
-    "version": "0.1.0",
+    "version": "0.0.0",
     "keywords": [
       "react-native-component",
       "react-component",

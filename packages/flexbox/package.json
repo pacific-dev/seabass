@@ -1,7 +1,7 @@
 {
     "name": "@seabass-ui/flexbox",
     "description": "React Native primitive flexbox UI to be used in pacific-dev projects. ",
-    "version": "0.1.0",
+    "version": "0.0.0",
     "keywords": [
       "react-native-component",
       "react-component",
