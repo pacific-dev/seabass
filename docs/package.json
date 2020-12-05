@@ -19,7 +19,7 @@
     "sideEffects": false,
     "scripts": {
         "start": "next",
-        "build": "next build"
+        "build": "next build && next export -o _site"
     },
     "dependencies": {
         "next": "^10.0.0",
