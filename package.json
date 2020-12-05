@@ -3,17 +3,17 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "example"
+      "example",
+      "docs"
     ]
   },
   "scripts": {
     "prepare": "lerna run prepare",
-    "start": "yarn workspace docs start",
-    "build": "yarn workspace docs build",
     "test": "jest --passWithNoTests",
     "lint": "eslint --ext '.js' .",
     "cover": "npx codecov",
-    "example": "yarn --cwd example"
+    "example": "yarn --cwd example",
+    "docs": "yarn --cwd docs"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
