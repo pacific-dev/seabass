@@ -86,7 +86,7 @@ export const preset = {
       },
     },
     outline: {
-      variant: 'buttons.primary',
+      variant: 'pressable.primary',
       color: 'primary',
       bg: 'transparent',
       border: 2,
@@ -94,7 +94,7 @@ export const preset = {
       borderStyle: 'solid',
     },
     secondary: {
-      variant: 'buttons.primary',
+      variant: 'pressable.primary',
       color: 'background',
       bg: 'secondary',
     },

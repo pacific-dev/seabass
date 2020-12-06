@@ -8,15 +8,15 @@ $ yarn add @seabass-ui/seabass
 
 # Theme Provider
 
-Out of the box the **Seabass** components can be styled without a theme.
+Out of the box, the **Seabass** components can be styled without a theme.
 You can create a theme and custom variant styles to components using a `ThemeProvider`.
-To install default theme and `ThemeProvider` install following packages:
+To install the default theme and `ThemeProvider` install the following packages:
 
 ```sh
 $ yarn add @seabass-ui/provider @seabass-ui/preset
 ```
 
-Then wrap the application like in this example:
+Then wrap the application like in the following example:
 
 ```jsx
 import React from 'react';
