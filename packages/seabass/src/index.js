@@ -8,8 +8,8 @@ import {
 
 export { Box, Flex };
 
-export const Text = forwardRef((props, ref) => (
-  <Box ref={ref} tx="text" as={RNText} {...props} />
+export const Text = forwardRef(({variant = "body", ...props}, ref) => (
+  <Box ref={ref} tx="text" variant={variant} as={RNText} {...props} />
 ));
 
 export const Heading = forwardRef((props, ref) => (
@@ -37,9 +37,8 @@ const pressableChildrens = (children) => {
     return (
       <Text
         __style={{
-          color: 'inherit',
+          color: null,
           lineHeight: 'inherit',
-          textDecoration: 'none',
           fontSize: 'inherit',
           textAlign: 'center',
         }}
@@ -62,9 +61,6 @@ export const Pressable = forwardRef(({ children, ...props }, ref) => (
     __style={{
       px: 3,
       py: 2,
-      color: 'white',
-      bg: 'primary',
-      border: 0,
       borderRadius: 4,
     }}
   >

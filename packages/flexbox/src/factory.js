@@ -141,10 +141,14 @@ const scales = {
 
 const extraAllowedStyle = {
   fontStyle: true,
+  fontVariant: true,
   textAlign: true,
+  textAlignVertical: true,
   textDecorationLine: true,
   textDecorationStyle: true,
+  textDecorationColor: true,
   textTransform: true,
+  includeFontPadding: true,
   overflow: true,
   aspectRatio: true,
   alignContent: true,

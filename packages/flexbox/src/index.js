@@ -20,9 +20,9 @@ export const Box = forwardRef((props, ref) => {
       ref={ref}
       {...props}
       style={flattenStyle([
+        base(props, { theme }),
         properties(props, { theme }),
         variant(props, { theme }),
-        base(props, { theme }),
         sx(props, { theme }),
       ])}
     />

@@ -1,50 +1,48 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ThemeProvider } from '@seabass-ui/theme-provider';
-import theme from '@seabass-ui/preset';
-import { Box } from '@seabass-ui/flexbox';
-import { Stack } from '@seabass-ui/layout';
-import { Label, Input, Textarea } from '@seabass-ui/forms';
-import { Pressable, Text, Image } from '@seabass-ui/seabass';
+import theme from './theme';
 
-const Placeholder = () => <Box width={100} height={20} bg={'black'} />;
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import TextScreen from './src/Text';
+import LayoutScreen from './src/Layout';
+import InteractionScreen from './src/Interactions';
+import FormsScreen from './src/Forms';
+import { Pressable } from '@seabass-ui/seabass';
+import { Stack } from '@seabass-ui/layout';
+
+const NavigationStack = createStackNavigator();
+
+function HomeScreen({ navigation }) {
+  return (
+    <Stack space={2} sx={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Pressable onPress={() => navigation.navigate('Text')}>Text</Pressable>
+      <Pressable onPress={() => navigation.navigate('Layout')}>
+        Layout
+      </Pressable>
+      <Pressable onPress={() => navigation.navigate('Interactions')}>
+        Interactions
+      </Pressable>
+      <Pressable onPress={() => navigation.navigate('Forms')}>Forms</Pressable>
+    </Stack>
+  );
+}
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box px={2} py={2}>
-        <Label>Open up App.js to start working on your app!</Label>
-        <Input />
-        <Textarea />
-        <Image
-          sx={{
-            width: 50,
-            height: 50,
-            borderRadius: 25,
-          }}
-          source={{ uri: 'https://picsum.photos/200/200' }}
-        />
-        <Pressable>
-          {({ pressed }) => (
-            <Text sx={{ color: 'inherit' }}>
-              I'm {pressed ? 'not pressed' : 'pressed'}
-            </Text>
-          )}
-        </Pressable>
-        <StatusBar style="auto" />
-      </Box>
-      <Stack space={3} px={2}>
-        <Stack space={2} vertical={false}>
-          <Placeholder />
-          <Placeholder />
-          <Placeholder />
-        </Stack>
-        <Stack space={2} vertical={true}>
-          <Placeholder />
-          <Placeholder />
-          <Placeholder />
-        </Stack>
-      </Stack>
+      <StatusBar style="auto" />
+
+      <NavigationContainer>
+        <NavigationStack.Navigator>
+          <NavigationStack.Screen name="Home" component={HomeScreen} />
+          <NavigationStack.Screen name="Text" component={TextScreen} />
+          <NavigationStack.Screen name="Layout" component={LayoutScreen} />
+          <NavigationStack.Screen name="Interactions" component={InteractionScreen} />
+          <NavigationStack.Screen name="Forms" component={FormsScreen} />
+        </NavigationStack.Navigator>
+      </NavigationContainer>
     </ThemeProvider>
   );
 }

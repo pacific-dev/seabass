@@ -68,7 +68,6 @@ export const preset = {
       'fontWeight': 'bold',
       'p': 2,
       'color': 'inherit',
-      'textDecoration': 'none',
       ':pressed': {
         color: 'primary',
       },

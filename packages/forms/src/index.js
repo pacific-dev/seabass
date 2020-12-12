@@ -26,11 +26,7 @@ export const Input = forwardRef((props, ref) => (
     __style={{
       width: '100%',
       p: 2,
-      fontSize: 'inherit',
-      lineHeight: 'inherit',
-      border: '1px solid',
       borderRadius: 'default',
-      color: 'inherit',
       bg: 'transparent',
     }}
   />
@@ -47,11 +43,7 @@ export const Textarea = forwardRef((props, ref) => (
     __style={{
       width: '100%',
       p: 2,
-      fontSize: 'inherit',
-      lineHeight: 'inherit',
-      border: '1px solid',
       borderRadius: 'default',
-      color: 'inherit',
       bg: 'transparent',
     }}
   />
