@@ -7,7 +7,7 @@ function FormsScreen() {
   return (
     <Stack space={3} px={2}>
       <Input placeholder="Type something" />
-          <Textarea placeholder="Type something more" />
+      <Textarea placeholder="Type something more" />
     </Stack>
   );
 }

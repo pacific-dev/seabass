@@ -16,7 +16,10 @@ const NavigationStack = createStackNavigator();
 
 function HomeScreen({ navigation }) {
   return (
-    <Stack space={2} sx={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Stack
+      space={2}
+      sx={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
+    >
       <Pressable onPress={() => navigation.navigate('Text')}>Text</Pressable>
       <Pressable onPress={() => navigation.navigate('Layout')}>
         Layout
@@ -39,7 +42,10 @@ export default function App() {
           <NavigationStack.Screen name="Home" component={HomeScreen} />
           <NavigationStack.Screen name="Text" component={TextScreen} />
           <NavigationStack.Screen name="Layout" component={LayoutScreen} />
-          <NavigationStack.Screen name="Interactions" component={InteractionScreen} />
+          <NavigationStack.Screen
+            name="Interactions"
+            component={InteractionScreen}
+          />
           <NavigationStack.Screen name="Forms" component={FormsScreen} />
         </NavigationStack.Navigator>
       </NavigationContainer>

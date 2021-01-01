@@ -8,7 +8,7 @@ import {
 
 export { Box, Flex };
 
-export const Text = forwardRef(({variant = "body", ...props}, ref) => (
+export const Text = forwardRef(({ variant = 'body', ...props }, ref) => (
   <Box ref={ref} tx="text" variant={variant} as={RNText} {...props} />
 ));
 

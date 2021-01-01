@@ -6,15 +6,14 @@ import React from 'react';
 function FormsScreen() {
   return (
     <Stack space={3} px={2}>
-         
-         <Image
-            sx={{
-              width: 50,
-              height: 50,
-              borderRadius: 'circle',
-            }}
-            source={{ uri: 'https://picsum.photos/200/200' }}
-          />
+      <Image
+        sx={{
+          width: 50,
+          height: 50,
+          borderRadius: 'circle',
+        }}
+        source={{ uri: 'https://picsum.photos/200/200' }}
+      />
     </Stack>
   );
 }

@@ -93,29 +93,29 @@ export const preset = {
   },
   forms: {
     input: {
-      bg: "ui.0",
-      height: "interactive",
+      bg: 'ui.0',
+      height: 'interactive',
     },
     textarea: {
-      bg: "ui.0",
+      bg: 'ui.0',
       height: 88,
-    }
+    },
   },
   pressable: {
     primary: {
-      height: "interactive",
-      bg: "interactive.0",
-      alignItems: "center",
-      justifyContent: "center",
-      flexDirection: "row",
+      height: 'interactive',
+      bg: 'interactive.0',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'row',
       px: 4,
-      borderRadius: "default",
-      color: "text.4",
+      borderRadius: 'default',
+      color: 'text.4',
       flex: 1,
     },
     secondary: {
       bg: 'interactive.1',
-      color: "text.3",
+      color: 'text.3',
       px: 1,
     },
   },
